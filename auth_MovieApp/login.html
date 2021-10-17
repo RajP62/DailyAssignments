@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        #login_sub input{
+            display: block;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loginBox">
+        <h1>Login</h1>
+        <form onsubmit="loginUser(event)" id="login_sub">
+            <input type="text" name="username" placeholder=UserName>
+            <input type="text" name="password" placeholder="Password">
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    if(localStorage.getItem("userData")===null){
+        localStorage.setItem("userData",JSON.stringify([]));
+    }
+    function loginUser(ev){
+        ev.preventDefault();
+
+        let form = document.getElementById("login_sub");
+        let enteredData = {
+            username: form.username.value,
+            password: form.password.value
+        }
+        let dataToSend = JSON.stringify(enteredData);
+
+
+        console.log(enteredData)
+
+        fetch("https://masai-api-mocker.herokuapp.com/auth/login",{
+            method: "POST",
+            body: dataToSend,
+            headers:{
+                "Content-Type": "application/json",
+            }
+        })
+        .then((res)=>{
+            return res.json();
+        })
+        .then(({error,token})=>{
+            if(error==false){
+                window.location.href = "index.html";
+                localStorage.setItem("userData",JSON.stringify([{username: enteredData.username}]));
+                
+                
+            }
+            else{
+                alert("Wrong Details Entered");
+            }
+        })
+        .catch((err)=>{
+            console.log("Error in fetching the details",err)
+        })
+
+    }
+</script>

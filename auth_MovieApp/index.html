@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+    <style>
+        input{
+            width: 200px;
+        }
+        #movies{
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            overflow: scroll;
+            border-top: none;
+        }
+        .seeTrendingData{
+            background-color: purple;
+            color: white;
+            font-weight: bold;
+        }
+        #userName{
+            position: absolute;
+            left: 50%;
+            background-color: purple;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <input oninput="debounce(main,1000)" type="text" id="movie" placeholder="Enter movie name">
+
+    <button onclick="redirectToPopularDisplay()" class="seeTrendingData" id="trendingData">See the trending data</button>
+    <span id="userName">Hello</span>
+
+    <div id="movies"></div>
+</body>
+</html>
+
+<script>
+    let userData = JSON.parse(localStorage.getItem('userData'));
+    let username = userData[0].username;
+    let spanEl = document.getElementById("userName");
+    spanEl.innerHTML = `Hello ${username}`;
+    // window.addEventListener("load",()=>{
+    //     const params = window.location.search;
+    //     const name = params.get('username');
+    //     const password = params.get('password');
+    //     console.log(name, password)
+    // })
+
+    const api_key = "api_key=1f20926b9bfb3d935a3aa39dccee2a9b";
+    const base_url = "https://api.themoviedb.org/3";
+    const api_url = base_url+ 'c'+api_key;
+    const image_baseUrl = "https://image.tmdb.org/t/p/w500";
+    var timerId;
+    let movies_div = document.getElementById("movies")
+    let inp_elem = document.getElementById("movie")
+
+    async function searchMovies(movie_Name){
+
+        try{
+            let res = await fetch(`http://www.omdbapi.com/?s=${movie_Name}&apikey=f513670`);
+            let data = await res.json();
+            // console.log(data)
+            return data;
+        }catch(e){
+            console.log("e", e)
+        }
+        // f513670
+
+    }
+
+    function appendMovies(movies){
+        if(movies===undefined){
+            return false;
+        }
+
+        movies_div.innerHTML = null;
+
+        movies.forEach(function(movie){
+            let p = document.createElement("p");
+            p.onclick = function(){
+                displayMovie(movie);
+            }
+            p.innerText = movie.Title;
+            movies_div.append(p);
+        });
+
+    }
+
+
+    async function main(){
+        let name = inp_elem.value;
+        // get search movie
+        if(name.length < 3){
+            return false;
+        }
+        let res = await searchMovies(name);
+
+        let movies_data = res.Search;
+        appendMovies(movies_data)
+
+        console.log("res:", res);
+    }
+
+    function debounce(func, delay){
+        // lets talk about A 
+        // Func = main()
+
+        // ave- setTimeout - func - main() - searchMovies("ave")
+        // aven - clear the prev timeout - setTimeout - func()- main()- searchMovies("aven")
+
+        if(timerId){
+            clearTimeout(timerId);
+        }
+        clearTimeout(timerId);
+        timerId = setTimeout(function(){
+            func()
+        },delay)
+    }
+
+
+    function displayMovie(movie){
+        console.log(movie)
+        movies_div.style.display = "none";
+        inp_elem.style.display = "none";
+
+        // displaying the data
+        var movieCont = document.createElement("div");
+        var poster = document.createElement("img");
+        poster.src = movie.Poster;
+        var title = document.createElement("h1");
+        title.textContent = movie.Title;
+        var rel_date = document.createElement("p");
+        rel_date.textContent =`Release date: ${movie.Year}`;
+        var imdbId = document.createElement("p");
+        imdbId.textContent = `IMDB ID: ${movie.imdbID}`;
+
+        movieCont.append(poster, title, rel_date,imdbId);
+        document.body.append(movieCont);
+    }
+
+    function redirectToPopularDisplay(){
+    window.location.href = "displayPopular.html";
+}
+
+</script>

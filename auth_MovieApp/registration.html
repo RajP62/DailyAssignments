@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        #reg_form input{
+            display: block;
+            margin: 5px;
+        }
+        #reg_formt{
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Youtube Authentication</h1>
+    <div class="registration">
+        <form onsubmit="submitData(event)" id="reg_form">
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="email" placeholder="Email">
+            <input type="text" id="password" placeholder="Password">
+            <input type="text" id="username" placeholder="UserName">
+            <input type="text" id="mobile" placeholder="Mobile">
+            <input type="text" id="description" placeholder="Description">
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>
+
+<script>
+    // "name":"dfjakjfkl","email":"kkjklj@gmail.com","password":"jlkjlkjklj","username":"kjkljk","mobile":"7865780086","description":"khkjh"
+    // {"name":"RajeshRaj","email":"rajesh4555@gmail.com","password":"rajeshrajesh48","username":"Rajesh345","mobile":"8684858484","description":"Hii it's me "}
+    function submitData(ev){
+        ev.preventDefault();
+        console.log("entered")
+        let form = document.getElementById("reg_form");
+
+        let userDetails = {
+            name: form.name.value,
+            email:form.email.value,
+            password:form.password.value,
+            username:form.username.value,
+            mobile:form.mobile.value,
+            description:form.description.value 
+        }
+
+        let dataToJson = JSON.stringify(userDetails);
+        console.log(dataToJson)
+
+        fetch("https://masai-api-mocker.herokuapp.com/auth/register",
+        {
+            method:"POST",
+            body:dataToJson,
+            headers:{
+                "Content-Type":"application/json"
+            }
+        }).then((res)=>{
+            return res.json();
+        }).then((res)=>{
+            console.log(res)
+            window.location.href = "login.html"
+        }).catch((err)=>{
+            console.log("err",err)
+        });
+    }
+
+</script>
