@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search The Reciepe</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <div id="navbar"></div>
+    <form id="search_rec">
+        <input type="text" id="searchRec" placeholder="Search Reciepe">
+        <input type="submit" id="btnSubmit">
+    </form>
+    <div id="main-container_search"></div>
+</body>
+</html>
+
+<script type="module">
+var debounceSearch;
+    
+import navbar from './components/header.js';
+
+import {getData,append} from './components/getData.js';
+
+let nav = document.getElementById('navbar');
+
+nav.innerHTML=navbar();
+
+let form = document.getElementById('search_rec');
+
+form.addEventListener("submit",()=>{
+    disSearch(event);
+});
+
+let mainCont = document.getElementById('main-container_search');
+
+function disSearch(ev){
+    ev.preventDefault();
+    mainCont.innerHTML = null;
+    let inp_data = document.getElementById('searchRec').value;
+    let body = getData(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inp_data}`);
+    body.then((res)=>{
+        console.log(res)
+        append(res.meals,mainCont);
+    })
+    .catch((err)=>{
+        console.log("err",err);
+    });
+}
+let inpEl = document.getElementById('searchRec');
+inpEl.addEventListener('keyup',()=>{debounce(suggestRec,1000)});
+
+function suggestRec(){
+    mainCont.innerHTML = null
+    let entered = document.getElementById('searchRec').value;
+    if(entered.length<3){
+        return;
+    }
+    let data = getData(`https://www.themealdb.com/api/json/v1/1/search.php?s=${entered}`);
+    data.then((res)=>{
+        console.log(res);
+        append(res.meals, mainCont);
+    })
+}
+
+function debounce(func, time){
+    if(debounceSearch!==null){
+        clearTimeout(debounceSearch)
+    }
+    debounceSearch = setTimeout(() => {
+        func();
+    }, time);
+}
+
+</script>
+<!-- <script defer>
+    function disSearch(ev){
+    ev.preventDefault();
+    let inp_data = document.getElementById('searchRec').value;
+    // let body = getData(inp_data);
+    // body.then((res)=>{
+    //     console.log(res)
+    // })
+    console.log("rajesh");
+}
+
+</script> -->

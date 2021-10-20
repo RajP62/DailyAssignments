@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav a{
+    list-style: none;
+    color: white;
+}
+.nav div{
+    display: flex;
+    margin: 5px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #7952B3;
+}
+
+#searchRec{
+    margin: 10px;
+    border: 2px solid grey;
+    width: 90%;
+}
+
+#btnSubmit{
+    background-color: purple;
+    color: white;
+    border-radius: 2px;
+}
+
+#main-container_search{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3,30%);
+    gap: 3%;
+}
+#main-container_search img{
+    max-width: 100%;
+    margin: 5px;
+}
