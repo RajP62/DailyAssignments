@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get,Post,Put,Delete</title>
+</head>
+<body>
+    <div class="form_Post">
+        <h1>Post the data</h1>
+        <form id="data_post">
+            <input type="text" name="id" placeholder="ID">
+            <input type="text" name="title" placeholder="Title">
+            <input type="text" name="description" placeholder="Description">
+            <input type="text" name="brand" placeholder="Brand">
+            <input type="text" name="price" placeholder="Price">
+            <input type="submit" onclick="postData(event)">
+        </form>
+    </div>
+
+    <div>
+        <form id="form_delete">
+            <h1>Delete the data</h1>
+            <input type="text" id="del_id" placeholder="Id">
+            <input type="submit" onclick="deleteProduct(event)">
+        </form>
+    </div>
+
+    <div>
+        <form id="modify">
+            <h1>Modify the data</h1>
+            <input type="text" id="mod_id" placeholder="IdToChange">
+            <input type="text" name="changeTo" placeholder="Change Id To"> 
+            <input type="text" name="title" placeholder="Title">
+            <input type="text" name="description" placeholder="Description">
+            <input type="text" name="brand" placeholder="Brand">
+            <input type="text" name="price" placeholder="Price">
+            <input type="submit" onclick="modifyProduct(event)">
+        </form>
+    </div>
+</body>
+</html>
+
+<script>
+    // Getting the data
+    try{
+        fetch('http://localhost:5000/api/products')
+    .then((res)=>{
+        res.json().then((res)=>{
+            console.log(res);
+        })
+    });
+    }
+    catch(err){
+        console.log("error",err);
+    }
+    
+    // Posting the data
+    async function postData(ev){
+        ev.preventDefault();
+        let form = document.getElementById('data_post');
+        let dataToPost = {
+            id:form.id.value,
+            title:form.title.value,
+            description:form.description.value,
+            brand:form.brand.value,
+            price:form.price.value
+        }
+        dataToPost = JSON.stringify(dataToPost);
+        
+        fetch(`http://localhost:5000/api/products`,{
+            method:'POST',
+            body:dataToPost,
+            headers:{
+                'Content-Type':'application/json',
+            }
+        })
+        .then((res)=>{
+            return res.json();
+        })
+        .then((res)=>{
+            console.log(res);
+        })
+        .catch((err)=>{
+            console.log("error",err)
+        })
+    }
+
+    // Deleting the data
+    async function deleteProduct(ev){
+        ev.preventDefault();
+        let id = document.getElementById('del_id').value;
+        try{
+            let body = fetch(`http://localhost:5000/api/products/${id}`,{
+            method:'DELETE',
+            headers:{
+                'Content-Type':'application/json',
+            }
+            })
+            let res = await body.json();
+            console.log(res)
+        }
+        catch(err){
+            console.log("error",err);
+        }
+        
+    }
+
+    // Modifying the data
+    async function modifyProduct(ev){
+        ev.preventDefault();
+        let form = document.getElementById('modify');
+            let rep_data = {
+            title:form.title.value,
+            description:form.description.value,
+            brand:form.brand.value,
+            price:form.price.value,
+            }
+        rep_data = JSON.stringify(rep_data);
+        let modById = document.getElementById('mod_id').value;
+        try{
+            let body = fetch(`http://localhost:5000/api/products/${modById}`,{
+            method:'PUT',
+            body:rep_data,
+            headers:{
+                'Content-Type':'application/json',
+            }
+            })
+            let res = await body.json();
+            console.log(res);
+        }
+        catch(err){
+            console.log("error",err);
+        }
+        
+    }
+</script>

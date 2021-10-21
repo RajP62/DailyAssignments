@@ -1,0 +1,18 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Shoes",
+      "description": "These are the shoes",
+      "brand": "adidas",
+      "price": "INR2000"
+    },
+    {
+      "title": "new",
+      "description": "this is changed product",
+      "brand": "new",
+      "price": "49494",
+      "id": "2"
+    }
+  ]
+}
