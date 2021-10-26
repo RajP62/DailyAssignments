@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(57, 199, 224);
+}
+
+.container{
+    margin: auto;
+    text-align: center;
+}
+
+.txtArea{
+    display: inline-block;
+
+}

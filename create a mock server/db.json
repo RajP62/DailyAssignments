@@ -8,11 +8,11 @@
       "price": "INR2000"
     },
     {
-      "id": "2",
-      "title": "xyz",
-      "description": "xyz",
-      "brand": "xyz",
-      "price": "xyz"
+      "title": "New",
+      "description": "The data is changed",
+      "brand": "no brand",
+      "price": "2000",
+      "id": "2"
     }
   ]
 }
