@@ -1,0 +1,37 @@
+body{
+    background-color: rgb(57, 199, 224);
+}
+
+.container{
+    margin: auto;
+    text-align: center;
+}
+
+.txtArea{
+    display: inline-block;
+
+}
+
+#mic_btn{
+    color: blueviolet;
+    cursor: pointer;
+}
+
+input[type='submit'],select{
+    background-color: blueviolet;
+    color: white;
+}
+
+.text{
+    color: black;
+    font-weight: bold;
+}
+
+textarea{
+    background-color: black;
+    color: white;
+}
+
+.container{
+    background-color: #F7F7F7;
+}

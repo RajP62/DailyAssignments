@@ -61,3 +61,33 @@ async function translate(lang,text){
         console.log('err',err);
     }
 }
+
+function runSpeechRec(){
+    var inp_txt = document.getElementById('changeFrom');
+
+    // let SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
+    // let recognition = new SpeechRecognition;
+
+    // recognition.onstart = ()=>{
+    //     inp_txt.innerHTML = "<small>Listening, Please speak...</small";
+    // }
+
+    // recognition.onspeechend = 
+    var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+    var recognition = new SpeechRecognition();
+
+    recognition.onstart = ()=>{
+        inp_txt.innerHTML = "<small>Listening, please speak</small>";
+    }
+
+    recognition.onspeechend = ()=>{
+        inp_txt.innerHTML = "<small>Listening stopped</small>";
+    }
+
+    recognition.onresult = (event)=>{
+        var transcript = event.results[0][0].transcript;
+        inp_txt.innerText = transcript;
+    }
+
+    recognition.start();
+}

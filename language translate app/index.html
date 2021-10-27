@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Language translate App</title>
     <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
-<body>
+<body background="images/background-image.png">
     <div class="container">
-        <h1>Translate your sentence</h1>
-        <p>Speak aloud feature implemented</p>
+        <h1 class="text">Translate your sentence</h1>
+        <p class="text">Speak aloud feature implemented</p>
+        <i class="material-icons" id="mic_btn" onclick="runSpeechRec()">mic</i>
         <form action="" id="translateForm" onsubmit="showTxt(event)">
            <select name="" id="translateTo"></select>
            <textarea name="" name="change" class="txtArea" id="changeFrom" cols="30" rows="10"></textarea>
