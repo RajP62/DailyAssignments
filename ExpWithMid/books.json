@@ -1,0 +1,702 @@
+[
+    {
+        "id": 1,
+        "author": "latterbury0",
+        "bookName": "Sonsing",
+        "pages": 303,
+        "publishedYear": 2005
+    },
+    {
+        "id": 2,
+        "author": "pjossum1",
+        "bookName": "Matsoft",
+        "pages": 149,
+        "publishedYear": 2001
+    },
+    {
+        "id": 3,
+        "author": "btilzey2",
+        "bookName": "Kanlam",
+        "pages": 516,
+        "publishedYear": 2002
+    },
+    {
+        "id": 4,
+        "author": "rhasell3",
+        "bookName": "Opela",
+        "pages": 969,
+        "publishedYear": 1992
+    },
+    {
+        "id": 5,
+        "author": "jlyfield4",
+        "bookName": "Fixflex",
+        "pages": 582,
+        "publishedYear": 2000
+    },
+    {
+        "id": 6,
+        "author": "rlamdin5",
+        "bookName": "Treeflex",
+        "pages": 619,
+        "publishedYear": 1987
+    },
+    {
+        "id": 7,
+        "author": "rcaselli6",
+        "bookName": "Latlux",
+        "pages": 742,
+        "publishedYear": 1995
+    },
+    {
+        "id": 8,
+        "author": "beverex7",
+        "bookName": "Cardguard",
+        "pages": 417,
+        "publishedYear": 2009
+    },
+    {
+        "id": 9,
+        "author": "ttyreman8",
+        "bookName": "Matsoft",
+        "pages": 580,
+        "publishedYear": 2010
+    },
+    {
+        "id": 10,
+        "author": "lcarnelley9",
+        "bookName": "Bytecard",
+        "pages": 317,
+        "publishedYear": 2007
+    },
+    {
+        "id": 11,
+        "author": "rkarpmanna",
+        "bookName": "Zathin",
+        "pages": 889,
+        "publishedYear": 2010
+    },
+    {
+        "id": 12,
+        "author": "llehrahanb",
+        "bookName": "Gembucket",
+        "pages": 621,
+        "publishedYear": 1998
+    },
+    {
+        "id": 13,
+        "author": "jditerc",
+        "bookName": "Pannier",
+        "pages": 862,
+        "publishedYear": 1994
+    },
+    {
+        "id": 14,
+        "author": "dvarned",
+        "bookName": "Voyatouch",
+        "pages": 485,
+        "publishedYear": 1985
+    },
+    {
+        "id": 15,
+        "author": "dpenne",
+        "bookName": "It",
+        "pages": 18,
+        "publishedYear": 2009
+    },
+    {
+        "id": 16,
+        "author": "bvallentinf",
+        "bookName": "Bytecard",
+        "pages": 113,
+        "publishedYear": 2006
+    },
+    {
+        "id": 17,
+        "author": "spinnickg",
+        "bookName": "Flexidy",
+        "pages": 29,
+        "publishedYear": 2000
+    },
+    {
+        "id": 18,
+        "author": "awhyffenh",
+        "bookName": "Otcom",
+        "pages": 775,
+        "publishedYear": 1997
+    },
+    {
+        "id": 19,
+        "author": "mstariei",
+        "bookName": "Alpha",
+        "pages": 377,
+        "publishedYear": 2007
+    },
+    {
+        "id": 20,
+        "author": "gtiltj",
+        "bookName": "Cardguard",
+        "pages": 988,
+        "publishedYear": 2008
+    },
+    {
+        "id": 21,
+        "author": "mhonnicottk",
+        "bookName": "Bytecard",
+        "pages": 44,
+        "publishedYear": 2011
+    },
+    {
+        "id": 22,
+        "author": "dpiggreml",
+        "bookName": "Job",
+        "pages": 954,
+        "publishedYear": 2010
+    },
+    {
+        "id": 23,
+        "author": "etombsm",
+        "bookName": "Hatity",
+        "pages": 686,
+        "publishedYear": 1997
+    },
+    {
+        "id": 24,
+        "author": "marrighin",
+        "bookName": "Prodder",
+        "pages": 128,
+        "publishedYear": 1995
+    },
+    {
+        "id": 25,
+        "author": "ldonnellyo",
+        "bookName": "Hatity",
+        "pages": 226,
+        "publishedYear": 2004
+    },
+    {
+        "id": 26,
+        "author": "scomettoip",
+        "bookName": "Latlux",
+        "pages": 52,
+        "publishedYear": 1985
+    },
+    {
+        "id": 27,
+        "author": "rizakovq",
+        "bookName": "Solarbreeze",
+        "pages": 15,
+        "publishedYear": 2002
+    },
+    {
+        "id": 28,
+        "author": "dglenwrightr",
+        "bookName": "Matsoft",
+        "pages": 819,
+        "publishedYear": 1994
+    },
+    {
+        "id": 29,
+        "author": "ibartosinskis",
+        "bookName": "Viva",
+        "pages": 156,
+        "publishedYear": 1999
+    },
+    {
+        "id": 30,
+        "author": "hbeekmannt",
+        "bookName": "Matsoft",
+        "pages": 652,
+        "publishedYear": 1995
+    },
+    {
+        "id": 31,
+        "author": "amaffyu",
+        "bookName": "Cardify",
+        "pages": 671,
+        "publishedYear": 2011
+    },
+    {
+        "id": 32,
+        "author": "hpapev",
+        "bookName": "Lotstring",
+        "pages": 115,
+        "publishedYear": 1964
+    },
+    {
+        "id": 33,
+        "author": "jleasew",
+        "bookName": "Fix San",
+        "pages": 489,
+        "publishedYear": 1992
+    },
+    {
+        "id": 34,
+        "author": "sdowsingx",
+        "bookName": "Temp",
+        "pages": 637,
+        "publishedYear": 1991
+    },
+    {
+        "id": 35,
+        "author": "ayeldy",
+        "bookName": "Matsoft",
+        "pages": 540,
+        "publishedYear": 1987
+    },
+    {
+        "id": 36,
+        "author": "blevickz",
+        "bookName": "Aerified",
+        "pages": 183,
+        "publishedYear": 1992
+    },
+    {
+        "id": 37,
+        "author": "egoulborn10",
+        "bookName": "Sonsing",
+        "pages": 665,
+        "publishedYear": 1999
+    },
+    {
+        "id": 38,
+        "author": "jmaccurtain11",
+        "bookName": "Tempsoft",
+        "pages": 615,
+        "publishedYear": 1998
+    },
+    {
+        "id": 39,
+        "author": "dgillicuddy12",
+        "bookName": "Voltsillam",
+        "pages": 580,
+        "publishedYear": 2008
+    },
+    {
+        "id": 40,
+        "author": "rpostles13",
+        "bookName": "Kanlam",
+        "pages": 620,
+        "publishedYear": 2013
+    },
+    {
+        "id": 41,
+        "author": "tlockett14",
+        "bookName": "Zamit",
+        "pages": 828,
+        "publishedYear": 2000
+    },
+    {
+        "id": 42,
+        "author": "kcarbery15",
+        "bookName": "Span",
+        "pages": 69,
+        "publishedYear": 2000
+    },
+    {
+        "id": 43,
+        "author": "jhabbes16",
+        "bookName": "Tin",
+        "pages": 217,
+        "publishedYear": 2008
+    },
+    {
+        "id": 44,
+        "author": "tgovier17",
+        "bookName": "Sonsing",
+        "pages": 81,
+        "publishedYear": 2002
+    },
+    {
+        "id": 45,
+        "author": "acoathup18",
+        "bookName": "Rank",
+        "pages": 630,
+        "publishedYear": 2002
+    },
+    {
+        "id": 46,
+        "author": "dchadbourne19",
+        "bookName": "Stronghold",
+        "pages": 558,
+        "publishedYear": 2002
+    },
+    {
+        "id": 47,
+        "author": "hcardenoza1a",
+        "bookName": "Flexidy",
+        "pages": 606,
+        "publishedYear": 1993
+    },
+    {
+        "id": 48,
+        "author": "bcharrette1b",
+        "bookName": "Mat Lam Tam",
+        "pages": 121,
+        "publishedYear": 2006
+    },
+    {
+        "id": 49,
+        "author": "ttolcher1c",
+        "bookName": "Keylex",
+        "pages": 225,
+        "publishedYear": 1971
+    },
+    {
+        "id": 50,
+        "author": "ltamburo1d",
+        "bookName": "Hatity",
+        "pages": 192,
+        "publishedYear": 2013
+    },
+    {
+        "id": 51,
+        "author": "manfusso1e",
+        "bookName": "Viva",
+        "pages": 896,
+        "publishedYear": 2012
+    },
+    {
+        "id": 52,
+        "author": "hjacobi1f",
+        "bookName": "Y-find",
+        "pages": 794,
+        "publishedYear": 1994
+    },
+    {
+        "id": 53,
+        "author": "apennetti1g",
+        "bookName": "Fintone",
+        "pages": 665,
+        "publishedYear": 2004
+    },
+    {
+        "id": 54,
+        "author": "arule1h",
+        "bookName": "Cardguard",
+        "pages": 803,
+        "publishedYear": 1979
+    },
+    {
+        "id": 55,
+        "author": "vcoie1i",
+        "bookName": "Biodex",
+        "pages": 169,
+        "publishedYear": 2013
+    },
+    {
+        "id": 56,
+        "author": "cpirri1j",
+        "bookName": "Sonsing",
+        "pages": 487,
+        "publishedYear": 1992
+    },
+    {
+        "id": 57,
+        "author": "bkarran1k",
+        "bookName": "Treeflex",
+        "pages": 564,
+        "publishedYear": 1997
+    },
+    {
+        "id": 58,
+        "author": "bmerali1l",
+        "bookName": "Zaam-Dox",
+        "pages": 982,
+        "publishedYear": 2008
+    },
+    {
+        "id": 59,
+        "author": "cmacdonell1m",
+        "bookName": "Regrant",
+        "pages": 958,
+        "publishedYear": 1992
+    },
+    {
+        "id": 60,
+        "author": "jmaccoughan1n",
+        "bookName": "Namfix",
+        "pages": 797,
+        "publishedYear": 1993
+    },
+    {
+        "id": 61,
+        "author": "ngronow1o",
+        "bookName": "Bamity",
+        "pages": 833,
+        "publishedYear": 2002
+    },
+    {
+        "id": 62,
+        "author": "esleford1p",
+        "bookName": "Sub-Ex",
+        "pages": 636,
+        "publishedYear": 2008
+    },
+    {
+        "id": 63,
+        "author": "brigby1q",
+        "bookName": "Bamity",
+        "pages": 541,
+        "publishedYear": 2009
+    },
+    {
+        "id": 64,
+        "author": "aknott1r",
+        "bookName": "Alphazap",
+        "pages": 953,
+        "publishedYear": 2010
+    },
+    {
+        "id": 65,
+        "author": "fattew1s",
+        "bookName": "Subin",
+        "pages": 335,
+        "publishedYear": 2007
+    },
+    {
+        "id": 66,
+        "author": "lenderle1t",
+        "bookName": "Voyatouch",
+        "pages": 408,
+        "publishedYear": 1994
+    },
+    {
+        "id": 67,
+        "author": "meaglestone1u",
+        "bookName": "Lotstring",
+        "pages": 197,
+        "publishedYear": 1973
+    },
+    {
+        "id": 68,
+        "author": "ghusband1v",
+        "bookName": "Zontrax",
+        "pages": 62,
+        "publishedYear": 1991
+    },
+    {
+        "id": 69,
+        "author": "jcaddies1w",
+        "bookName": "Y-Solowarm",
+        "pages": 223,
+        "publishedYear": 2011
+    },
+    {
+        "id": 70,
+        "author": "pcoghlan1x",
+        "bookName": "Y-find",
+        "pages": 17,
+        "publishedYear": 2003
+    },
+    {
+        "id": 71,
+        "author": "dvickars1y",
+        "bookName": "Duobam",
+        "pages": 528,
+        "publishedYear": 1993
+    },
+    {
+        "id": 72,
+        "author": "sditty1z",
+        "bookName": "Alphazap",
+        "pages": 269,
+        "publishedYear": 2005
+    },
+    {
+        "id": 73,
+        "author": "mhymus20",
+        "bookName": "Stim",
+        "pages": 152,
+        "publishedYear": 1997
+    },
+    {
+        "id": 74,
+        "author": "agooderick21",
+        "bookName": "Fixflex",
+        "pages": 977,
+        "publishedYear": 1989
+    },
+    {
+        "id": 75,
+        "author": "amcgurk22",
+        "bookName": "Sonsing",
+        "pages": 695,
+        "publishedYear": 1966
+    },
+    {
+        "id": 76,
+        "author": "cgresley23",
+        "bookName": "Bigtax",
+        "pages": 683,
+        "publishedYear": 1997
+    },
+    {
+        "id": 77,
+        "author": "mauckland24",
+        "bookName": "Lotstring",
+        "pages": 648,
+        "publishedYear": 2001
+    },
+    {
+        "id": 78,
+        "author": "cwinward25",
+        "bookName": "Trippledex",
+        "pages": 890,
+        "publishedYear": 1999
+    },
+    {
+        "id": 79,
+        "author": "fcoggles26",
+        "bookName": "Tampflex",
+        "pages": 993,
+        "publishedYear": 1996
+    },
+    {
+        "id": 80,
+        "author": "cheilds27",
+        "bookName": "Transcof",
+        "pages": 137,
+        "publishedYear": 2004
+    },
+    {
+        "id": 81,
+        "author": "mlavender28",
+        "bookName": "Solarbreeze",
+        "pages": 705,
+        "publishedYear": 2005
+    },
+    {
+        "id": 82,
+        "author": "kkenningham29",
+        "bookName": "Lotstring",
+        "pages": 731,
+        "publishedYear": 1998
+    },
+    {
+        "id": 83,
+        "author": "cfleeman2a",
+        "bookName": "Namfix",
+        "pages": 920,
+        "publishedYear": 1995
+    },
+    {
+        "id": 84,
+        "author": "dpappi2b",
+        "bookName": "Bitchip",
+        "pages": 657,
+        "publishedYear": 2006
+    },
+    {
+        "id": 85,
+        "author": "hhandasyde2c",
+        "bookName": "Duobam",
+        "pages": 780,
+        "publishedYear": 2005
+    },
+    {
+        "id": 86,
+        "author": "cjarrelt2d",
+        "bookName": "Ventosanzap",
+        "pages": 300,
+        "publishedYear": 2006
+    },
+    {
+        "id": 87,
+        "author": "rdagostini2e",
+        "bookName": "Aerified",
+        "pages": 920,
+        "publishedYear": 2007
+    },
+    {
+        "id": 88,
+        "author": "nwitchell2f",
+        "bookName": "Span",
+        "pages": 404,
+        "publishedYear": 2003
+    },
+    {
+        "id": 89,
+        "author": "acurnick2g",
+        "bookName": "Fix San",
+        "pages": 963,
+        "publishedYear": 2012
+    },
+    {
+        "id": 90,
+        "author": "mcool2h",
+        "bookName": "Rank",
+        "pages": 528,
+        "publishedYear": 1997
+    },
+    {
+        "id": 91,
+        "author": "pplumb2i",
+        "bookName": "Zathin",
+        "pages": 337,
+        "publishedYear": 1995
+    },
+    {
+        "id": 92,
+        "author": "mtrorey2j",
+        "bookName": "Keylex",
+        "pages": 872,
+        "publishedYear": 2007
+    },
+    {
+        "id": 93,
+        "author": "kpourveer2k",
+        "bookName": "Transcof",
+        "pages": 65,
+        "publishedYear": 1968
+    },
+    {
+        "id": 94,
+        "author": "ksinton2l",
+        "bookName": "Cookley",
+        "pages": 452,
+        "publishedYear": 1997
+    },
+    {
+        "id": 95,
+        "author": "bjoysey2m",
+        "bookName": "Tempsoft",
+        "pages": 439,
+        "publishedYear": 1995
+    },
+    {
+        "id": 96,
+        "author": "kbrealey2n",
+        "bookName": "Temp",
+        "pages": 872,
+        "publishedYear": 1998
+    },
+    {
+        "id": 97,
+        "author": "acortese2o",
+        "bookName": "Lotlux",
+        "pages": 474,
+        "publishedYear": 2008
+    },
+    {
+        "id": 98,
+        "author": "jdegenhardt2p",
+        "bookName": "Redhold",
+        "pages": 727,
+        "publishedYear": 2007
+    },
+    {
+        "id": 99,
+        "author": "bbullerwell2q",
+        "bookName": "Latlux",
+        "pages": 384,
+        "publishedYear": 2001
+    },
+    {
+        "id": 100,
+        "author": "gvaldes2r",
+        "bookName": "Duobam",
+        "pages": 92,
+        "publishedYear": 1998
+    }
+]
