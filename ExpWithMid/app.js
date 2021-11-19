@@ -1,35 +1,49 @@
 const express = require('express');
 const app = express();
-let books = require('./books.json');
+let booksObj = require('./books.json');
+let {books} = booksObj;
 app.use(express.json());
+app.use(nameToRes);
 
+function nameToRes(req,res,next){
+    // This is middleware function
+    req.resToSend = {api_requested_by: "Rajesh"};
+    next();
+}
 
 app.get('/',(req,res)=>{
-    res.send(books);
+    let resWithRequester = req.resToSend;
+    resWithRequester.books = books;
+    res.send(resWithRequester);
 });
 
 app.post('/books',(req,res)=>{
     books.push(req.body);
-    console.log(books)
-    res.send(books);
+    let resWithRequester = req.resToSend;
+    resWithRequester.books = books;
+    res.send(resWithRequester);
 });
 
 app.get('/books/:id',(req,res)=>{
     let book = books.filter((elem)=>elem.id===+req.params.id);
-    res.send(book);
+    let resWithRequester = req.resToSend;
+    resWithRequester.book = book;
+    res.send(resWithRequester);
 });
 
 app.patch('/books/:id',(req,res)=>{
+    let resWithRequester = req.resToSend;
     books.forEach(element => {
         if(element.id===+req.params.id){
             if(req?.body?.author) element.author = req.body.author;
             if(req?.body?.bookName) element.bookName = req.body.bookName;
             if(req?.body?.pages) element.pages = req.body.pages;
             if(req?.body?.publishedYear) element.publishedYear = req.body.publishedYear;
-
-            res.send(element);  
+            // res.send(element);  
+            resWithRequester.book = element;
         }
     });
+    res.send(resWithRequester);
 });
 
 app.delete('/books/:id',(req, res)=>{
@@ -43,10 +57,12 @@ app.delete('/books/:id',(req, res)=>{
     }
 
     if(elem){
-        let deletedElem = books.splice(elem,1);
-        res.send(deletedElem[0]);
+        books.splice(elem,1);
     }
-    console.log(books);
+    console.log(books)
+    let resWithRequester = req.resToSend;
+    resWithRequester.books = books;
+    res.send(resWithRequester);
 })
 
 
