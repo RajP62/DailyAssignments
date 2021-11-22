@@ -1,0 +1,42 @@
+//Created a database
+1. use assignment(created a database named assignment);
+
+//created a collection with name users and inside it stored two documents with all required fields using only insert
+2. db.users.insert({first_name:"Rajesh",last_name:"Paul",email:"Rajesh484@gmail.com",gender:"male",ip_address:"192.105.101", age:20})
+WriteResult({ "nInserted" : 1 })
+> db.users.find()
+{ "_id" : ObjectId("619b9425806aac5762272d7d"), "first_name" : "Rajesh", "last_name" : "Paul", "email" : "Rajesh484@gmail.com", "gender" : "male", "ip_address" : "192.105.101", "age" : 20 }
+
+//
+3.added 3 more documents using insertMany()
+db.users.insertMany([{first_name:"Jatin",last_name:"Pal", email:"jatin@gmail.com",gender:"male", ip_address:"155.4.5.6",age:26}, {first_name:"sjdfhf",last_name:"sjfhd",email:"skdfj@gmail.com",gender:"male",ip_address:"5847.5.55",age:40}, {first_name:"kdjkaj",last_name:"ksdjfkd",email:"sjfdkd@gmail.com",gender:"female",ip_address:"59384.565.4.4",age:50}])
+
+//Then i added 5 more documents by mongodbcompass using external json file
+
+//Then i selected all the available documents using find() and findOne()
+
+4. 
+db.users.find().pretty();
+db.users.findOne({_id:ObjectId("619b9690806aac5762272d80")})
+
+// updated one object with update() as put request and updateMany() as patch
+db.users.update({_id:ObjectId("619b99346ded30860089b44f")}, {first_name:"Rajesh",last_name:"Paul",email:"fdkjfskaf@gmail.com",gender:"male",age:40})// put request
+
+db.users.update({_id:ObjectId("619b99346ded30860089b44f")}, {$set:{ip_address: "149.56.44.44.44"}})// patch request
+
+db.users.updateMany({},{$set:{type:"person",residence:"Delhi"}})//patch request added two more fields
+
+//Deleted users with remove() deleteOne() and deleteMany()
+db.users.remove({_id: ObjectId("619b99346ded30860089b451")})
+
+ db.users.deleteOne({type:"person"})
+{ "acknowledged" : true, "deletedCount" : 1 } 
+
+db.users.deleteMany({gender:"male",age:40}) 
+
+//deleted the database
+
+7. 
+db.users.drop()
+
+db.dropDatabase()
