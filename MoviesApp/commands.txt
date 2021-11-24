@@ -1,0 +1,24 @@
+1. db.movies.find({movie_name:"Name of movie"});
+it can also be done as db.movies.find({movie_name:{$eq:"Name of movie"}})
+
+2. db.movies.find({movie_name:{$ne:"Name of movie"}})
+
+3.db.movies.find({$and: [{budget:{$gt: 10000}},{budget:{$gte: 12000}}]})
+
+4.db.movies.find({$and: [{budget:{$lt:15000}},{budget:{$lte:16000}}]})
+
+5.db.movies.find($and: [{production_year:{$gt:2000}},{budget:{$gt:10000}}])
+
+6.db.movies.find($or: [{production_year:{$gt:2000}},{budget:{$gt: 10000}}])
+
+7.db.movies.find({$nor: [{production_year:{$gt: 2000}}, {budget:{$gt:10000}}]})
+
+8.db.movies.find({$and: [{production_year:{$ne:2000}},{budget:{$ne: 10000}}]})
+
+9.db.movies.find({$and: [{production_year:{$gte: 2000}},{production_year:{$lte: 2010}}]})
+
+10.db.movies.find().sort({production_year: -1, movie_name: 1})
+
+11.db.movies.find().sort(production_year: -1,movie_name: 1).limit(5).skip(10)
+
+12.db.movies.find({},{movie_genre:0}).sort({production_year:-1, movie_name:1}).skip(10).limit(5)
