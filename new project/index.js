@@ -1,1 +1,0 @@
-console.log("Its just for checking new device")
