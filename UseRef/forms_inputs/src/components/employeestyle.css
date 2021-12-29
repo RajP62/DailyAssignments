@@ -1,0 +1,10 @@
+input{
+    color: blue;
+    display: block;
+    margin: 20px;
+}
+.formHolder{
+   display: flex;
+   justify-content: center;
+   background-color: yellow;
+}
