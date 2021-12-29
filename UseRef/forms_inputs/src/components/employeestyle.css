@@ -8,3 +8,16 @@ input{
    justify-content: center;
    background-color: yellow;
 }
+h1{
+    display: block;
+}
+
+.img_preview{
+    display: block;
+   width: 200px;
+   height: 200px;
+}
+image{
+
+   max-width: 10px;
+}

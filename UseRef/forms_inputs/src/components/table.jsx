@@ -13,6 +13,7 @@ export default ({data})=>{
             <th>Department</th>
             <th>Salary</th>
             <th>Marital Status</th>
+            <th>Profile Pic</th>
         </tr>
         </thead>
         <tbody>

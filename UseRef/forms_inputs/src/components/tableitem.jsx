@@ -6,5 +6,6 @@ export default ({employee})=>{
          <td>{employee.department}</td>
          <td>{employee.salary}</td>
          <td>{(employee.marriage).toString()}</td>
+         <td>{employee.profile}</td>
      </tr>
 }

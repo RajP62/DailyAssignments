@@ -1,13 +1,21 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import '../components/employeestyle.css';
 import Table from "./table"
-
+import axios from "axios"
 
 export default ({getEmployee})=>{
+    
     const [form, setForm] = useState({});
+    const inp_ref = useRef(null);
+    const [img_url, setImage] = useState("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuIbv-7JSgC23hcGq8qDRBpFzdMBEw8urHdQ&usqp=CAU")
 
     const handleChange = (e)=>{
         let {name, value, checked,type} = e.target;
+        if(name==='profile'){
+            value = inp_ref.current.files[0].name;
+            const img_url = URL.createObjectURL(inp_ref.current.files[0]);
+           setImage(img_url)
+        }
         value=type=='checkbox'? checked: value;
         setForm({
             ...form, [name]:value
@@ -16,7 +24,15 @@ export default ({getEmployee})=>{
     const saveTable = (e)=>{
         e.preventDefault();
         console.log(form)
-        getEmployee(form);
+        fetch("http://localhost:3000/employees",{
+            method:"POST",
+            body:JSON.stringify(form),
+            headers:{
+                "Content-Type":"application/json"
+            }
+        }).then(el=>el.json()).then(data=>{
+            console.log(data)
+        })
     }
     return <>
     <div className="formHolder">
@@ -32,9 +48,15 @@ export default ({getEmployee})=>{
         <input type="text" onChange={handleChange} placeholder="Salary" name="salary"/>
         <label>Marital Status</label>
         <input type="checkbox" onChange={handleChange} placeholder="Marital Status" name="marriage"/>
-        <input type="file" onChange={handleChange} placeholder="Profile pic" name="profile"/>
+        <input ref={inp_ref} type="file" onChange={handleChange} placeholder="Profile pic" name="profile"/>
         <input type="submit"/>
     </form>
+    <div style={{
+        backgroundImage: `url(${img_url})`,
+        backgroundSize: 'cover',
+        marginTop: '20px'
+    }} className="img_preview">
+    </div>
     </div>
     </>
 }
