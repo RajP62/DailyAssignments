@@ -1,0 +1,44 @@
+{
+  "employees": [
+    {
+      "username": "Rajesh",
+      "age": "20",
+      "address": "y-1/35",
+      "department": "sc",
+      "salary": "300000",
+      "marriage": true,
+      "profile": "sample.png",
+      "id": 1
+    },
+    {
+      "username": "Jatin",
+      "age": "22",
+      "address": "y-1/35",
+      "department": "it",
+      "salary": "300000",
+      "marriage": false,
+      "profile": "sample.png",
+      "id": 2
+    },
+    {
+      "username": "NewPerson",
+      "age": "30",
+      "address": "y-1/35",
+      "department": "sc",
+      "salary": "300000",
+      "marriage": true,
+      "profile": "person.webp",
+      "id": 3
+    },
+    {
+      "username": "admin",
+      "age": "40",
+      "address": "x-1/45",
+      "department": "none",
+      "salary": "2000000",
+      "marriage": true,
+      "profile": "personImage.png",
+      "id": 4
+    }
+  ]
+}
