@@ -3,7 +3,7 @@ let userName = dataUser[0].username;
 let spanEl = document.getElementById("displayName");
 spanEl.textContent = userName;
 let mainCont = document.getElementById("content");
-let key = "IMP-NOTE : PUT YOUR YOUTUBE_CLIENT_KEY HERE ONLY THEN IT WILL WORK";
+let key = "AIzaSyAnBaW48ziKnGqp-wJcZoZuyWom_CNt55M";
 getTrendingData();
 
 async function getData(){
